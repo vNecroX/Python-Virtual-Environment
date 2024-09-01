@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  moodle:
+    build: .
+    ports:
+      - "8081:80"  # Use a different host port, for example, 8081
+    volumes:
+      - ./python:/var/www/python # Linking python folder
+  # Add other services if needed
+
+volumes:
+  python: # Volume for faces image recognition code
+  custom-vhost.conf:
